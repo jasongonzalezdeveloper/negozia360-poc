@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
-import { Sale } from "@/lib/types/common";
 import ActiveSale from "./activeSale";
 import PendingSale from "./pendingSale";
 import SummaryForm from "./summaryForm";

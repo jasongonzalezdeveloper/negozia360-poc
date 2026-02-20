@@ -10,9 +10,14 @@ const messagesMap: Record<string, Record<string, string>> = {
   en: enMessages,
 };
 
-const LanguageContext = createContext({
+type LanguageContextType = {
+  locale: string;
+  setLocale: (lang: string) => void;
+};
+
+const LanguageContext = createContext<LanguageContextType>({
   locale: "es",
-  setLocale: (_lang: string) => {},
+  setLocale: () => undefined,
 });
 
 export function useLanguage() {

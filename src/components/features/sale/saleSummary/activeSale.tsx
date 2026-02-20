@@ -1,19 +1,12 @@
 "use client";
-import { Sale } from "@/lib/types/common";
 import React from "react";
-import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import {
-  addSale,
-  setActiveSale,
-  setNameActiveSale,
-} from "@/lib/store/slices/saleSlice";
+import { useAppSelector } from "@/lib/store/hooks";
 
 type ActiveSaleProps = {
   setShowSummary: (show: boolean) => void;
 };
 export default function ActiveSale({ setShowSummary }: ActiveSaleProps) {
   const activeSale = useAppSelector((state) => state.sale.activeSale);
-  // const dispatch = useAppDispatch();
 
   return (
     <div

@@ -6,6 +6,10 @@ This is a portfolio-ready frontend project built to showcase practical product d
 
 The product vision is to provide a highly customizable interface, especially around branding. For that reason, the UI theme is driven by CSS variables (including primary and secondary colors), making visual adaptation fast and scalable.
 
+## Live Demo
+
+https://jasongonzalezdeveloper.github.io/negozia360-poc/
+
 ## Why this project stands out
 
 - End-to-end UX flow for sales operations

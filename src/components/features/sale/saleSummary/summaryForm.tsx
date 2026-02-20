@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Sale } from "@/lib/types/common";
+import defaultProductImage from "@/assets/images/default.jpg";
 import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/lib/store/hooks";
 import {
@@ -100,7 +101,7 @@ export default function SummaryForm({
           {activeSale?.cart.map((p) => (
             <li key={p.id} className="flex items-center py-3 gap-3">
               <Image
-                src={"/images/default.jpg"}
+                src={defaultProductImage}
                 alt={p.name}
                 width={64}
                 height={64}

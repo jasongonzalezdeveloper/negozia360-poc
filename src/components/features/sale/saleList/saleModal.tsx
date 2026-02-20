@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Product } from "@/lib/types/common";
+import defaultProductImage from "@/assets/images/default.jpg";
 
 interface SaleModalProps {
   product: Product;
@@ -50,7 +51,7 @@ export default function SaleModal({
         </div>
         <div className="flex justify-center">
           <Image
-            src={product.image || "/images/default.jpg"}
+            src={product.image || defaultProductImage}
             alt={product.name}
             width={224}
             height={224}

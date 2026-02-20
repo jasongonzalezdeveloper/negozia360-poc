@@ -1,6 +1,7 @@
 import { Product } from "@/lib/types/common";
 import React from "react";
 import Image from "next/image";
+import defaultProductImage from "@/assets/images/default.jpg";
 
 type SaleListItemProps = {
   product: Product;
@@ -46,7 +47,7 @@ export default function SaleListItem({
           </div>
           <div className="flex-[7] w-full h-0" style={{ aspectRatio: "1/1" }}>
             <Image
-              src="/images/default.jpg"
+              src={defaultProductImage}
               alt={product.name}
               width={224}
               height={224}
@@ -68,7 +69,7 @@ export default function SaleListItem({
             style={{ aspectRatio: "1/1" }}
           >
             <Image
-              src="/images/default.jpg"
+              src={defaultProductImage}
               alt={product.name}
               width={224}
               height={224}

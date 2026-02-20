@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import defaultProductImage from "@/assets/images/default.jpg";
 import productsMock from "@/mocks/productMocks";
 import SaleModal from "./saleModal";
 import { Product } from "@/lib/types/common";
@@ -100,7 +101,7 @@ export default function SaleList() {
                     style={{ aspectRatio: "1/1" }}
                   >
                     <Image
-                      src="/images/default.jpg"
+                      src={defaultProductImage}
                       alt={product.name}
                       width={180}
                       height={180}

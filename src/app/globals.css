@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+
+:root {
+  --foreground: #ededed;
+  --colorPrimaryOrange: #F09652;
+  --colorPrimaryGreen: #93C572;
+  --colorPrimaryDark: #48594C;
+  --colorPrimaryOrangeHover: #e07c2f;
+  --colorPrimaryGreenHover: #7bbf4a;
+  --colorPrimaryDarkHover: #324034;
+  --colorBackgroundNavbar: #1f2520;
+  --colorBackgroundHeader: #ececec;
+  --colorBackgroundBody: #e0e1e3;
+
+  --colorBackgroundNewSell: var(--colorPrimaryOrange);
+  --colorBackgroundNewSellHover: var(--colorPrimaryOrangeHover);
+  --colorBackgroundNavActive: var(--colorPrimaryGreen);
+  --colorBackgroundNavActiveHover: var(--colorPrimaryGreenHover);
+  --colorBackgroundButton: var(--colorPrimaryDark);
+  --colorBackgroundButtonHover: var(--colorPrimaryDarkHover);
+  --colorBackgroundProductItem: var(--colorPrimaryDark);
+  --colorBackgroundProductItemHover: #b5d38d;
+  --colorBackgroundProductItemTextCard: #f6f6f6;
+
+  --colorBackgroundSuccess: var(--colorPrimaryGreen);
+  --colorBackgroundSuccessHover: var(--colorPrimaryGreenHover);
+  --colorBackgroundWarning: #fff3cd;
+  --colorBackgroundError: #f8d7da;
+
+  --colorText: #000002;
+  --colorTextAlt: #e7e8ec;
+}
+
+@theme inline {
+  --colorBackground: var(--colorBackgroundBody);
+  --colorForeground: var(--colorText);
+  --fontSans: var(--font-geist-sans);
+  --fontMono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1f23;
+    --foreground: #ededed;
+    --color-navbar: #1b1e25;
+    --color-header: #282c35;
+    --color-body-bg: #1a1f23;
+    --color-new-sell: #30bdad;
+    --color-nav-option: #272e34;
+    --color-nav-active: #adda75;
+    --color-text: #ffffff;
+    --color-background-button-hover: #323843;
+  }
+} */
+
+body {
+  background: var(--colorBackgroundBody);
+  color: var(--colorText);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card stack effect for ventas pendientes */
+.card-stack {
+  margin-left: -290px;
+  box-shadow: none;
+  transform: scale(0.92);
+  transition: margin-left 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.card-stack:hover {
+  margin-left: -160px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transform: scale(1.07);
+}
